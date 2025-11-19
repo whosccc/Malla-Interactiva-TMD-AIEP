@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malla Interactiva</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva TMD</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <h1>Malla Interactiva – Técnico en Marketing Digital</h1>
 
-  <script>
-    // Redirige automáticamente a la malla real
-    window.location.href = "malla_interactiva.html";
-  </script>
+    <!-- Barra de progreso -->
+    <div class="progreso-container">
+        <div class="progreso-texto">Progreso: <span id="contador">0</span>%</div>
+        <div class="progreso-barra">
+            <div id="progreso"></div>
+        </div>
+        <button id="reset-btn">Restablecer Malla</button>
+    </div>
 
+    <!-- SEMESTRES -->
+    <div class="semestre">
+        <h2>Primer Semestre</h2>
+        <div class="ramo no-aprobado" id="ramo1">Introducción al Marketing</div>
+        <div class="ramo no-aprobado" id="ramo2">Taller de Herramientas Online</div>
+        <div class="ramo no-aprobado" id="ramo3">Matemática para la Educación Superior</div>
+        <div class="ramo no-aprobado" id="ramo4">Usabilidad y Experiencia de Usuario</div>
+        <div class="ramo no-aprobado" id="ramo5">Herramientas para la Empleabilidad</div>
+        <div class="ramo no-aprobado" id="ramo6">Habilidades para la Comunicación</div>
+    </div>
+
+    <div class="semestre">
+        <h2>Segundo Semestre</h2>
+        <div class="ramo no-aprobado" id="ramo7">Marketing Digital</div>
+        <div class="ramo no-aprobado" id="ramo8">Taller de Diseño Web</div>
+        <div class="ramo no-aprobado" id="ramo9">Taller de Herramientas de Procesamiento de Datos</div>
+        <div class="ramo no-aprobado" id="ramo10">Marketing de Contenidos</div>
+        <div class="ramo no-aprobado" id="ramo11">Herramientas para la Innovación</div>
+        <div class="ramo no-aprobado" id="ramo12">Herramientas de Inteligencia Artificial</div>
+    </div>
+
+    <div class="semestre">
+        <h2>Tercer Semestre</h2>
+        <div class="ramo no-aprobado" id="ramo13">Marketing Digital Aplicado</div>
+        <div class="ramo no-aprobado" id="ramo14">Taller de Diseño e-commerce</div>
+        <div class="ramo no-aprobado" id="ramo15">Sostenibilidad Organizacional</div>
+        <div class="ramo no-aprobado" id="ramo16">Posicionamiento y Analítica Web</div>
+        <div class="ramo no-aprobado" id="ramo17">Certificado de Especialidad I</div>
+        <div class="ramo no-aprobado" id="ramo18">Metodologías Ágiles</div>
+    </div>
+
+    <div class="semestre">
+        <h2>Cuarto Semestre</h2>
+        <div class="ramo no-aprobado" id="ramo19">Community Manager</div>
+        <div class="ramo no-aprobado" id="ramo20">Inglés Inicial I</div>
+        <div class="ramo no-aprobado" id="ramo21">Taller de Marca Personal</div>
+        <div class="ramo no-aprobado" id="ramo22">Nuevas Tendencias del Marketing Digital</div>
+        <div class="ramo no-aprobado" id="ramo23">Taller de Proyecto de Especialidad</div>
+        <div class="ramo no-aprobado" id="ramo24">Certificado de Especialidad II</div>
+    </div>
+
+    <div class="semestre">
+        <h2>Quinto Semestre</h2>
+        <div class="ramo no-aprobado" id="ramo25">Práctica Profesional</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
