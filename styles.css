@@ -1,1 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Contenedor de cada semestre */
+.semestre {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Título del semestre */
+.semestre h2 {
+    margin-top: 0;
+}
+
+/* Cada ramo */
+.ramo {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Ramo no aprobado (por defecto) */
+.no-aprobado {
+    background-color: #ffb6c1; /* rosado */
+    color: #000;
+}
+
+/* Ramo aprobado */
+.aprobado {
+    background-color: #b19cd9; /* morado */
+    text-decoration: line-through;
+}
+
+/* Ramo bloqueado por prerrequisitos (no usas, pero lo dejo listo) */
+.bloqueado {
+    background-color: #d3d3d3; /* gris */
+    color: #777;
+    cursor: not-allowed;
+}
 
