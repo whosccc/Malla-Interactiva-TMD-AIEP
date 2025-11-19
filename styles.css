@@ -1,124 +1,97 @@
-/* ---------- PALETA A (Cute Rosado + Lila) ---------- */
-:root{
-  --pink:#ffb6d9;
-  --lilac:#c9b3ff;
-  --purple:#9a7dff;
-  --bg:#f7f3ff;
-  --card:#ffffff;
-  --muted:#6b5a86;
-  --danger:#ff5e8a;
-  --glass: rgba(255,255,255,0.7);
-  --glass-2: rgba(201,179,255,0.12);
-  --shadow: 0 8px 28px rgba(66,40,90,0.08);
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0ecff;
+    margin: 0;
+    padding: 25px;
 }
 
-/* Dark mode variables */
-:root.dark{
-  --bg:#0f0b12;
-  --card:#121018;
-  --muted:#cfc6ee;
-  --glass: rgba(255,255,255,0.03);
-  --glass-2: rgba(0,0,0,0.35);
-  --shadow: 0 8px 24px rgba(0,0,0,0.6);
+h1 {
+    text-align: center;
+    color: #3a2e85;
+    margin-bottom: 35px;
 }
 
-/* Reset */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-  background: linear-gradient(180deg,var(--bg) 0%, #f0eaff 100%);
-  color: #221b2f;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  padding:18px;
+/* Tarjetas de semestres */
+.semestre {
+    background: #ffffff;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    border-left: 6px solid #7c63ff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
 }
 
-/* Topbar */
-.topbar{
-  display:flex;
-  gap:16px;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:18px;
-}
-.brand{display:flex;gap:12px;align-items:center}
-.logo{
-  width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--purple));
-  display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:var(--shadow);
-}
-.brand h1{font-size:18px;color:var(--muted)}
-.brand .subtitle{font-size:12px;color:var(--muted);opacity:.9}
-
-.controls{display:flex;gap:10px;align-items:center}
-
-/* Search */
-.search-wrapper{display:flex;align-items:center;background:var(--card);border-radius:12px;padding:6px 8px;box-shadow:var(--shadow)}
-.search-wrapper input{
-  border:0;outline:none;background:transparent;padding:8px 10px;width:210px;font-size:14px;color:inherit;
-}
-.search-wrapper button{border:0;background:transparent;cursor:pointer;font-size:14px;padding:6px 8px}
-
-/* Theme toggle */
-#theme-toggle{
-  border:0;background:linear-gradient(180deg,var(--lilac),var(--purple));color:white;padding:8px 10px;border-radius:10px;cursor:pointer;
-  box-shadow:0 6px 18px rgba(122,90,255,0.18);
+.semestre h2 {
+    margin-top: 0;
+    color: #4a39a1;
 }
 
-/* Layout */
-.container{max-width:1100px;margin:0 auto}
-.card{background:var(--card);padding:16px;border-radius:14px;box-shadow:var(--shadow)}
-
-/* Progreso global */
-.progreso-global{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
-.progreso-head{display:flex;justify-content:space-between;align-items:center}
-.progreso-head h2{font-size:16px;color:var(--muted)}
-.progreso-stats{font-weight:700;color:var(--muted)}
-
-.progress-wrapper{width:100%}
-.progress-bar-bg{background:linear-gradient(90deg, rgba(154,125,255,0.12), rgba(255,182,217,0.06));height:18px;border-radius:12px;overflow:hidden}
-.progress-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--purple),var(--pink));transition:width .45s cubic-bezier(.2,.9,.2,1);}
-
-/* Actions */
-.actions{display:flex;gap:8px;align-items:center}
-.btn{padding:8px 12px;border-radius:10px;border:0;background:var(--lilac);color:white;cursor:pointer;font-weight:600}
-.btn-danger{background:var(--danger);}
-
-/* Malla grid */
-.malla-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-
-/* Card semestre */
-.sem-card{background:var(--card);padding:14px;border-radius:14px;box-shadow:var(--shadow);border-left:6px solid var(--purple)}
-.sem-card h3{margin-bottom:10px;color:var(--muted)}
-
-/* Progress by semester */
-.sem-progress{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.sem-progress .small-bar{flex:1;height:10px;border-radius:8px;background:linear-gradient(90deg, rgba(154,125,255,0.06), rgba(255,182,217,0.03));overflow:hidden}
-.sem-progress .small-bar > .fill{height:100%;width:0;background:linear-gradient(90deg,var(--lilac),var(--pink));transition:width .35s ease}
-
-/* Ramos list */
-.ramos-list{display:flex;flex-direction:column;gap:10px}
-.ramo{
-  display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease;
-  border:1px solid rgba(0,0,0,0.03);
+/* Ramos */
+.ramo {
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
 }
-.ramo:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(33,21,56,0.08)}
-.ramo .left{display:flex;gap:12px;align-items:center}
-.ramo .icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
-.ramo .title{font-weight:700}
-.ramo .meta{font-size:12px;color:var(--muted);opacity:.8}
 
-/* States */
-.no-aprobado{background:linear-gradient(180deg,var(--pink), rgba(255,182,217,0.25));color:#401d3a;border-left:6px solid #ff7aa8}
-.aprobado{background:linear-gradient(180deg,var(--lilac),rgba(201,179,255,0.15));color:#392859;border-left:6px solid var(--purple);text-decoration:line-through;opacity:0.95}
-.bloqueado{background:linear-gradient(180deg,#ededed,#f7f7f7);color:#9a9a9a;cursor:not-allowed;opacity:0.9}
+/* Hover */
+.ramo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
 
-/* Footer */
-.footer{max-width:1100px;margin:28px auto 0;text-align:center;color:var(--muted);font-size:13px}
+/* Estados */
+.no-aprobado {
+    background: #ffcae5;
+    border-left: 6px solid #ff69a7;
+}
 
-/* Responsive */
-@media (max-width:900px){
-  .malla-grid{grid-template-columns:1fr}
-  .search-wrapper input{width:120px}
-  .brand h1{font-size:16px}
+.aprobado {
+    background: #d3c4ff;
+    border-left: 6px solid #9c7bff;
+    text-decoration: line-through;
+    color: #3f2d71;
+}
+
+/* Barra de Progreso */
+.progreso-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.progreso-barra {
+    width: 100%;
+    background: #e8e2ff;
+    height: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#progreso {
+    height: 100%;
+    background: #7c63ff;
+    width: 0%;
+    border-radius: 10px;
+    transition: width .4s ease;
+}
+
+#reset-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff5e8a;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+
+#reset-btn:hover {
+    background: #cc4d72;
 }
