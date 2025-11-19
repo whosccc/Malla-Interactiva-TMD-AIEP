@@ -1,129 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Malla Interactiva – Técnico en Marketing Digital</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva TMD</title>
 
-    h2 {
-        margin-top: 40px;
-        color: #333;
-    }
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 
-    .semestre {
-        border: 2px solid #d0d0d0;
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 25px;
-        background: white;
-    }
-
-    .ramos {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 12px;
-        margin-top: 10px;
-    }
-
-    .ramo {
-        padding: 15px;
-        background: #ffb6c1; /* rosado */
-        border-radius: 8px;
-        cursor: pointer;
-        text-align: center;
-        font-weight: bold;
-        transition: 0.2s;
-    }
-
-    .ramo:hover {
-        opacity: 0.8;
-    }
-
-    .aprobado {
-        background: #b38bfa !important; /* morado */
-        text-decoration: line-through;
-        color: white;
-    }
-</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Malla Interactiva – Técnico en Marketing Digital</h1>
-<p>Haz clic en cada ramo para marcarlo como aprobado.</p>
 
-<script>
-// Guardar estado en localStorage
-function toggleRamo(id) {
-    const elemento = document.getElementById(id);
-    elemento.classList.toggle("aprobado");
+    <h1>Malla Interactiva – Técnico en Marketing Digital</h1>
 
-    const estado = elemento.classList.contains("aprobado");
-    localStorage.setItem(id, estado);
-}
+    <!-- PRIMER SEMESTRE -->
+    <div class="semestre">
+        <h2>Primer Semestre</h2>
 
-// Cargar estado guardado
-window.onload = () => {
-    document.querySelectorAll('.ramo').forEach(ramo => {
-        const estado = localStorage.getItem(ramo.id);
-        if (estado === "true") ramo.classList.add("aprobado");
-    });
-};
-</script>
-
-<!-- AÑO 1 -->
-<h2>Año 1 – 1er Semestre</h2>
-<div class="semestre">
-    <div class="ramos">
-        <div class="ramo" id="introMarketing" onclick="toggleRamo('introMarketing')">Introducción al Marketing</div>
-        <div class="ramo" id="herrOnline" onclick="toggleRamo('herrOnline')">Taller de Herramientas Online</div>
-        <div class="ramo" id="matematica" onclick="toggleRamo('matematica')">Matemática para la Educación Superior</div>
-        <div class="ramo" id="ux" onclick="toggleRamo('ux')">Usabilidad y Experiencia de Usuario</div>
-        <div class="ramo" id="empleabilidad" onclick="toggleRamo('empleabilidad')">Herramientas para la Empleabilidad</div>
-        <div class="ramo" id="comunicacion" onclick="toggleRamo('comunicacion')">Habilidades para la Comunicación</div>
+        <div id="s1_r1" class="ramo no-aprobado">Introducción al Marketing</div>
+        <div id="s1_r2" class="ramo no-aprobado">Taller de Herramientas Online</div>
+        <div id="s1_r3" class="ramo no-aprobado">Matemática para la Educación Superior</div>
+        <div id="s1_r4" class="ramo no-aprobado">Usabilidad y Experiencia de Usuario</div>
+        <div id="s1_r5" class="ramo no-aprobado">Herramientas para la Empleabilidad</div>
+        <div id="s1_r6" class="ramo no-aprobado">Habilidades para la Comunicación</div>
     </div>
-</div>
 
-<h2>Año 1 – 2° Semestre</h2>
-<div class="semestre">
-    <div class="ramos">
-        <div class="ramo" id="marketingDigital" onclick="toggleRamo('marketingDigital')">Marketing Digital</div>
-        <div class="ramo" id="disenoWeb" onclick="toggleRamo('disenoWeb')">Taller de Diseño Web</div>
-        <div class="ramo" id="procesamientoDatos" onclick="toggleRamo('procesamientoDatos')">Taller de Herramientas de Procesamiento de Datos</div>
-        <div class="ramo" id="marketingContenidos" onclick="toggleRamo('marketingContenidos')">Marketing de Contenidos</div>
-        <div class="ramo" id="innovacion" onclick="toggleRamo('innovacion')">Herramientas para la Innovación</div>
-        <div class="ramo" id="ia" onclick="toggleRamo('ia')">Herramientas de Inteligencia Artificial</div>
-    </div>
-</div>
+    <!-- SEGUNDO SEMESTRE -->
+    <div class="semestre">
+        <h2>Segundo Semestre</h2>
 
-<!-- AÑO 2 -->
-<h2>Año 2 – 3er Semestre</h2>
-<div class="semestre">
-    <div class="ramos">
-        <div class="ramo" id="mdAplicado" onclick="toggleRamo('mdAplicado')">Marketing Digital Aplicado</div>
-        <div class="ramo" id="disenoEcommerce" onclick="toggleRamo('disenoEcommerce')">Taller de Diseño e-commerce</div>
-        <div class="ramo" id="sostenibilidad" onclick="toggleRamo('sostenibilidad')">Sostenibilidad Organizacional</div>
-        <div class="ramo" id="analiticaWeb" onclick="toggleRamo('analiticaWeb')">Posicionamiento y Analítica Web</div>
-        <div class="ramo" id="cert1" onclick="toggleRamo('cert1')">Certificado de Especialidad I</div>
-        <div class="ramo" id="metodologias" onclick="toggleRamo('metodologias')">Metodologías Ágiles</div>
+        <div id="s2_r1" class="ramo no-aprobado">Marketing Digital</div>
+        <div id="s2_r2" class="ramo no-aprobado">Taller de Diseño Web</div>
+        <div id="s2_r3" class="ramo no-aprobado">Taller de Herramientas de Procesamiento de Datos</div>
+        <div id="s2_r4" class="ramo no-aprobado">Marketing de Contenidos</div>
+        <div id="s2_r5" class="ramo no-aprobado">Herramientas para la Innovación</div>
+        <div id="s2_r6" class="ramo no-aprobado">Herramientas de Inteligencia Artificial</div>
     </div>
-</div>
 
-<h2>Año 2 – 4° Semestre</h2>
-<div class="semestre">
-    <div class="ramos">
-        <div class="ramo" id="communityManager" onclick="toggleRamo('communityManager')">Community Manager</div>
-        <div class="ramo" id="ingles1" onclick="toggleRamo('ingles1')">Inglés Inicial I</div>
-        <div class="ramo" id="marcaPersonal" onclick="toggleRamo('marcaPersonal')">Taller de Marca Personal</div>
-        <div class="ramo" id="tendencias" onclick="toggleRamo('tendencias')">Nuevas Tendencias del Marketing Digital</div>
-        <div class="ramo" id="proyectoEspecialidad" onclick="toggleRamo('proyectoEspecialidad')">Taller de Proyecto de Especialidad</div>
-        <div class="ramo" id="cert2" onclick="toggleRamo('cert2')">Certificado de Especialidad II</div>
+    <!-- TERCER SEMESTRE -->
+    <div class="semestre">
+        <h2>Tercer Semestre</h2>
+
+        <div id="s3_r1" class="ramo no-aprobado">Marketing Digital Aplicado</div>
+        <div id="s3_r2" class="ramo no-aprobado">Taller de Diseño e-commerce</div>
+        <div id="s3_r3" class="ramo no-aprobado">Sostenibilidad Organizacional</div>
+        <div id="s3_r4" class="ramo no-aprobado">Posicionamiento y Analítica Web</div>
+        <div id="s3_r5" class="ramo no-aprobado">Certificado de Especialidad I</div>
+        <div id="s3_r6" class="ramo no-aprobado">Metodologías Ágiles</div>
     </div>
-</div>
+
+    <!-- CUARTO SEMESTRE -->
+    <div class="semestre">
+        <h2>Cuarto Semestre</h2>
+
+        <div id="s4_r1" class="ramo no-aprobado">Community Manager</div>
+        <div id="s4_r2" class="ramo no-aprobado">Inglés Inicial I</div>
+        <div id="s4_r3" class="ramo no-aprobado">Taller de Marca Personal</div>
+        <div id="s4_r4" class="ramo no-aprobado">Nuevas Tendencias del Marketing Digital</div>
+        <div id="s4_r5" class="ramo no-aprobado">Taller de Proyecto de Especialidad</div>
+        <div id="s4_r6" class="ramo no-aprobado">Certificado de Especialidad II</div>
+    </div>
+
+    <!-- QUINTO SEMESTRE -->
+    <div class="semestre">
+        <h2>Quinto Semestre</h2>
+
+        <div id="s5_r1" class="ramo no-aprobado">Práctica Profesional</div>
+    </div>
 
 </body>
 </html>
