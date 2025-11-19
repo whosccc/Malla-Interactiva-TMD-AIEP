@@ -1,72 +1,97 @@
-/* ======== ESTILOS GENERALES ======== */
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f1eefc;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0ecff;
     margin: 0;
-    padding: 20px;
+    padding: 25px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
-    color: #3e2b7c;
+    color: #3a2e85;
+    margin-bottom: 35px;
 }
 
-/* ======== CONTENEDOR DE SEMESTRES ======== */
+/* Tarjetas de semestres */
 .semestre {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-    margin-bottom: 30px;
-    border-left: 6px solid #7b61ff;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    border-left: 6px solid #7c63ff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
 }
 
 .semestre h2 {
     margin-top: 0;
-    color: #4b3ca6;
+    color: #4a39a1;
 }
 
-/* ======== RAMOS ======== */
+/* Ramos */
 .ramo {
     padding: 14px;
     margin: 10px 0;
     border-radius: 12px;
     font-weight: 600;
-    transition: all 0.2s ease;
     cursor: pointer;
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    transition: all .2s ease;
 }
 
-/* Hover visual */
+/* Hover */
 .ramo:hover {
     transform: scale(1.02);
     box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 }
 
-/* Estado no aprobado */
+/* Estados */
 .no-aprobado {
-    background-color: #ffc4d9;
-    border-left: 6px solid #ff7aa8;
-    color: #781c33;
+    background: #ffcae5;
+    border-left: 6px solid #ff69a7;
 }
 
-/* Estado aprobado */
 .aprobado {
-    background-color: #cdb8ff;
-    border-left: 6px solid #9b70ff;
+    background: #d3c4ff;
+    border-left: 6px solid #9c7bff;
     text-decoration: line-through;
-    color: #3d256b;
+    color: #3f2d71;
 }
 
-/* Estado bloqueado (por si lo necesitas en el futuro) */
-.bloqueado {
-    background-color: #dddddd;
-    border-left: 6px solid #a5a5a5;
-    color: #6b6b6b;
-    cursor: not-allowed;
+/* Barra de Progreso */
+.progreso-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.progreso-barra {
+    width: 100%;
+    background: #e8e2ff;
+    height: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#progreso {
+    height: 100%;
+    background: #7c63ff;
+    width: 0%;
+    border-radius: 10px;
+    transition: width .4s ease;
+}
+
+#reset-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff5e8a;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+
+#reset-btn:hover {
+    background: #cc4d72;
 }
